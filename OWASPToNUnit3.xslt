@@ -24,7 +24,7 @@
                   Original OWASP Report
                 </description>
                 <filePath>
-                  <xsl:value-of select="concat($sourceFolder, '/OWASP-ZAP-Report.xml')"/>
+                  <xsl:value-of select="$sourceFolder"/><xsl:text>/OWASP-ZAP-Report.xml</xsl:text>
                 </filePath>
               </attachment>
               <attachment>
@@ -32,7 +32,7 @@
                   Original OWASP Report 2
                 </description>
                 <filePath>
-                  <xsl:value-of select="concat('$(System.DefaultWorkingDirectory)/OWASP-ZAP-Report.xml')"/>
+                  <xsl:value-of select="concat('$(System.DefaultWorkingDirectory)', '/OWASP-ZAP-Report.xml')"/>
                 </filePath>
               </attachment>
             </attachments>
@@ -59,6 +59,3 @@
     </test-run>
   </xsl:template>
 </xsl:stylesheet>
-
-
-
